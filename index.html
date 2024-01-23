@@ -1,25 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Site</title>
-
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
-  </head>
-  <body>
+</head>
+<body>
     <header>
-      <div id="header">Quiz Time: <span id="timer">90</span> seconds</div>
+        <div id="HS">
+            <button aria-label="View Highscores" onclick="viewHighscores()">View Highscores</button>
+        </div>
+        <div id="header">Quiz Time: <span id="timer">90</span> seconds</div>
     </header>
 
-    <div id="quiz-container">
-      <div id="question-container" class="question"></div>
-      <div id="options-container" class="options"></div>
-      <button onclick="nextQuestion()">Next</button>
-      <button onclick="showResults()">Show Results</button>
-      <div id="result"></div>
-    </div>
+    <main>
+        <div id="start-container">
+            <button id="start-button">Start Quiz</button>
+        </div>
+
+        <section id="quiz-container" style="display: none;">
+            <div id="question-container" class="question"></div>
+            <div id="options-container" class="options"></div>
+            <button onclick="nextQuestion()">Next</button>
+            <button onclick="showResult()">Show Results</button>
+            <div id="result"></div>
+        </section>
+
+        <section id="highscore-container" style="display: none;">
+            <h2>Highscores</h2>
+            <ul id="highscore-list"></ul>
+        </section>
+    </main>
 
     <script src="./assets/js/script.js"></script>
-  </body>
+</body>
 </html>
