@@ -3,36 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Site</title>
+    <title>Silly Quiz</title>
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
 </head>
 <body>
-    <header>
-        <div id="HS">
-            <button aria-label="View Highscores" onclick="viewHighscores()">View Highscores</button>
-        </div>
-        <div id="header">Quiz Time: <span id="timer">90</span> seconds</div>
-    </header>
 
-    <main>
-        <div id="start-container">
-            <button id="start-button">Start Quiz</button>
-        </div>
+<header>
+    <div id="HS">
+        <button aria-label="View-Highscores" onclick="viewHighscores()">View Highscores</button>
+    </div>
+    <div id="header">Time Left: <span id="timer">90</span> seconds</div>
+</header>
 
-        <section id="quiz-container" style="display: none;">
-            <div id="question-container" class="question"></div>
-            <div id="options-container" class="options"></div>
+<main>
+    <div id="start-container">
+        <button id="start-button">Start Quiz</button>
+    </div>
+
+    <section id="quiz-container" style="display: none;">
+        <div id="question-container" class="question"></div>
+        <div id="options-container" class="options"></div>
+        <div class="button-container">
             <button onclick="nextQuestion()">Next</button>
-            <button onclick="showResult()">Show Results</button>
-            <div id="result"></div>
-        </section>
+            <button onclick="showResult()">End</button>
+        </div>
+        <div id="result"></div>
+    </section>
+    
 
-        <section id="highscore-container" style="display: none;">
-            <h2>Highscores</h2>
-            <ul id="highscore-list"></ul>
-        </section>
-    </main>
+    <section id="highscore-container" style="display: none;">
+        <h2>Highscores</h2>
+        <ul id="highscore-list"></ul>
+        <button id="reset-highscores">Reset Highscores</button>
+    </section>
+</main>
 
-    <script src="./assets/js/script.js"></script>
+<div id="message" style="display: none;"></div>
+
+<script src="./assets/js/script.js"></script>
 </body>
 </html>
